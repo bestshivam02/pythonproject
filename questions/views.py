@@ -54,7 +54,7 @@ def home(request):
         else:
             ipv = "Private"
   
-    url = 'https://get.geojs.io/v1/ip/geo/'+ipAdd+'.json'
+    url = 'https://get.geojs.io/v1/ip/geo/'+ip+'.json'
     geo_request = requests.get(url)
     geo_data = geo_request.json()
     url = 'https://api.openweathermap.org/data/2.5/weather?lat='+geo_data['latitude']+'&lon='+geo_data['longitude']+'&units=imperial&type=accurate&appid=e11862ae7905f24f99e779d8ffeed6c1'
